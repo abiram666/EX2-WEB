@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery Orders</title>
+</head>
+<body>
+    <h2>Food Delivery Orders</h2>
+    <table border ="1" cellpadding="8">
+        <tr>
+            <th>Customer Name</th>
+            <th>Dish Name</th>
+            <th>Cost</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.customer_name }}</td>
+            <td>{{ order.dish_name }}</td>
+            <td>₹{{ order.cost }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
